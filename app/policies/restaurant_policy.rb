@@ -12,4 +12,8 @@ class RestaurantPolicy < ApplicationPolicy
   def update?
     edit?
   end
+
+  def destroy?
+    edit?
+  end
 end
