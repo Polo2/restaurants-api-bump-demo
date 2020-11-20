@@ -36,6 +36,8 @@ gem 'simple_form'
 
 gem 'pundit'
 
+gem 'simple_token_authentication'
+
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
