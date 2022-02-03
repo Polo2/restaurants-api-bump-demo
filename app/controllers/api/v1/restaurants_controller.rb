@@ -28,11 +28,6 @@ class Api::V1::RestaurantsController < Api::V1::BaseController
     end
   end
 
-  def destroy
-    @restaurant.destroy
-    head :no_content
-  end
-
 private
 
   def set_restaurant
