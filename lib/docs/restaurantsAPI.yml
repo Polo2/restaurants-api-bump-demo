@@ -127,36 +127,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
-    delete:
-      summary: Destroy specific restaurant
-      parameters:
-        - name: restaurantId
-          in: path
-          required: true
-          description: The id of the restaurant to retrieve
-          schema:
-            type: string
-        - name: X-User-email
-          in: header
-          required: true
-          schema:
-            type: string
-            example: polo@bump.sh
-        - name: X-User-Token
-          in: header
-          required: true
-          schema:
-            type: string
-            example: oRWFjCmuzP-cUeshuZpq
-      responses:
-        '204':
-          description: No Content
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
 components:
   schemas:
     Comment:
