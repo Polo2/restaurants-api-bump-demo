@@ -158,7 +158,6 @@ components:
       required:
         - id
         - name
-        - address
       properties:
         id:
           type: integer
@@ -168,7 +167,7 @@ components:
           example: La Broche
         address:
           type: string
-          example: 14 Rue Romarin, 69001 Lyon
+          example: Saint Marcellin
     RestaurantWithComment:
       type: object
       required:
