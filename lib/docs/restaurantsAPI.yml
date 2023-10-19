@@ -28,25 +28,26 @@ paths:
       summary: Create a restaurant
       parameters:
         - name: X-User-email
-          in: header
-          required: true
+          in: query
+          # required: true
           schema:
             type: string
             example: polo@bump.sh
         - name: X-User-Token
           in: header
-          required: true
+          deprecated: true
+          # required: true
           schema:
             type: string
             example: oRWFjCmuzP-cUeshuZpq
             requestBody:
-      requestBody:
-        description: New Restaurant information
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/NewRestaurant'
+      # requestBody:
+      #   description: New Restaurant information
+      #   required: true
+      #   content:
+      #     application/json:
+      #       schema:
+      #         $ref: '#/components/schemas/NewRestaurant'
       responses:
         # '201':
         #   description: Restaurant created
