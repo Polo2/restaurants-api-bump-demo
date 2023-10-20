@@ -23,6 +23,8 @@ class Api::V1::RestaurantsController < Api::V1::BaseController
     authorize @restaurant
     if @restaurant.save
       render :show, status: :created
+    elsif @restaurant.address.include?("Bordeaux")
+      render :show, status: :333 # this is fake of course
     else
       render_error
     end

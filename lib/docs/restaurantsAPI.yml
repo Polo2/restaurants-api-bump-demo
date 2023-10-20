@@ -48,8 +48,10 @@ paths:
             schema:
               $ref: '#/components/schemas/NewRestaurant'
       responses:
-        '201':
-          description: Restaurant created
+        # '201':
+        #   description: Restaurant created
+        333:
+          description: Restaurant created in Bordeaux
         default:
           description: unexpected error
           content:
