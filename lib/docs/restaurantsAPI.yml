@@ -29,25 +29,24 @@ paths:
       parameters:
         - name: X-User-email
           in: query
-          # required: true
+          required: true
           schema:
             type: string
             example: polo@bump.sh
         - name: X-User-Token
           in: header
-          deprecated: true
-          # required: true
+          # deprecated: true
+          required: true
           schema:
-            type: string
+            type: [string, number]
             example: oRWFjCmuzP-cUeshuZpq
             requestBody:
-      # requestBody:
-      #   description: New Restaurant information
-      #   required: true
-      #   content:
-      #     application/json:
-      #       schema:
-      #         $ref: '#/components/schemas/NewRestaurant'
+              description: New Restaurant information
+              required: true
+              content:
+                application/json:
+                  schema:
+                    $ref: '#/components/schemas/NewRestaurant'
       responses:
         # '201':
         #   description: Restaurant created
@@ -212,11 +211,11 @@ components:
       type: object
       required:
         - code
-        - message
+        # - message
       properties:
         code:
-          type: integer
-          format: int32
+          type: number
+          example: 33.3
         message:
           type: string
           example: 'Unauthorized RestaurantPolicy...'
